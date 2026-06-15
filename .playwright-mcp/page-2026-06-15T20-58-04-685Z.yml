@@ -1,0 +1,273 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - iframe [ref=e3]:
+      
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "PX Docs" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]: PX
+          - generic [ref=e10]: Docs
+        - generic [ref=e12]:
+          - generic:
+            - img
+          - textbox "Search docs, endpoints, guides..." [ref=e13]
+          - generic [ref=e15]: to search
+        - generic [ref=e16]:
+          - group [ref=e17]:
+            - generic "v1.4" [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]:
+                - img [ref=e20]
+                - text: v1.4
+                - img [ref=e24]
+          - link "API Ref" [ref=e26] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e27]
+            - text: API Ref
+          - link "Changelog" [ref=e29] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e30]
+            - text: Changelog
+    - main [ref=e34]:
+      - complementary [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - generic [ref=e39]: RA
+              - generic [ref=e40]:
+                - generic [ref=e41]: Docs Assistant
+                - generic [ref=e42]: Ask questions, get examples
+            - generic [ref=e43]:
+              - button "Quick Q&A" [ref=e44]:
+                - img [ref=e45]
+                - text: Quick Q&A
+              - button "Examples" [ref=e47]:
+                - img [ref=e48]
+                - text: Examples
+          - navigation [ref=e51]:
+            - generic [ref=e52]:
+              - generic [ref=e53]: Getting Started
+              - generic [ref=e54]:
+                - link "Overview" [ref=e55] [cursor=pointer]:
+                  - /url: /docs
+                  - img [ref=e56]
+                  - text: Overview
+                - link "Installation" [ref=e61] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e62]
+                  - text: Installation
+                - link "Configuration" [ref=e65] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e66]
+                  - text: Configuration
+            - generic [ref=e68]:
+              - generic [ref=e69]: MCP Tools
+              - generic [ref=e70]:
+                - link "Resume Analysis" [ref=e71] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e72]
+                  - text: Resume Analysis
+                - link "Interview Prep" [ref=e75] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e76]
+                  - text: Interview Prep
+                - link "Cover Letter" [ref=e78] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e79]
+                  - text: Cover Letter
+                - link "LinkedIn Optimization" [ref=e83] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e84]
+                  - text: LinkedIn Optimization
+            - generic [ref=e90]:
+              - generic [ref=e91]: Guides
+              - generic [ref=e92]:
+                - link "Custom Prompts" [ref=e93] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e94]
+                  - text: Custom Prompts
+                - link "Data Privacy" [ref=e96] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e97]
+                  - text: Data Privacy
+                - link "Deploying Claude" [ref=e100] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e101]
+                  - text: Deploying Claude
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - link "Docs" [ref=e114] [cursor=pointer]:
+            - /url: "#"
+          - img [ref=e115]
+          - link "MCP Server" [ref=e117] [cursor=pointer]:
+            - /url: "#"
+          - img [ref=e118]
+          - generic [ref=e120]: Analysis Endpoint
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - heading "Analysis API" [level=1] [ref=e124]
+            - paragraph [ref=e125]: Extract keywords, calculate ATS score, generate interview questions, and build cover letters using the centralized MCP toolkit.
+            - generic [ref=e126]:
+              - generic [ref=e127]:
+                - img [ref=e128]
+                - text: Web parsing
+              - generic [ref=e131]:
+                - img [ref=e132]
+                - text: LLM execution
+              - generic [ref=e136]:
+                - img [ref=e137]
+                - text: PDF parsing
+              - generic [ref=e140]:
+                - img [ref=e141]
+                - text: SSE streaming
+          - generic [ref=e145]:
+            - link "Endpoints" [ref=e146] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e147]
+              - text: Endpoints
+            - link "Try" [ref=e148] [cursor=pointer]:
+              - /url: "#"
+              - text: Try
+              - img [ref=e149]
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - heading "Quickstart" [level=2] [ref=e153]
+            - link "Full guide" [ref=e154] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e155]
+              - text: Full guide
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - generic [ref=e161]: "1"
+              - generic [ref=e162]:
+                - generic [ref=e163]: Start the MCP Server
+                - generic [ref=e164]:
+                  - text: Run
+                  - code [ref=e165]: npm start
+                  - text: in your backend directory to initialize the tools.
+            - listitem [ref=e166]:
+              - generic [ref=e167]: "2"
+              - generic [ref=e168]:
+                - generic [ref=e169]: Make your analysis query
+                - generic [ref=e170]: Send a POST request to the analyzer endpoint with a resume path and job URL.
+            - listitem [ref=e171]:
+              - generic [ref=e172]: "3"
+              - generic [ref=e173]:
+                - generic [ref=e174]: Stream the results
+                - generic [ref=e175]: Use SSE to receive incremental JSON patches containing ATS scores and feedback.
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - heading "Analysis request" [level=3] [ref=e178]
+            - generic [ref=e179]:
+              - button "cURL" [ref=e180]
+              - button "Node" [ref=e181]
+              - button "Python" [ref=e182]
+          - generic [ref=e183]:
+            - code [ref=e185]: "import { ResumeClient } from \"@resume-ai/sdk\";\\n\\nconst client = new ResumeClient({ apiKey: process.env.API_KEY });\\n\\nconst analysis = await client.analyze({\\n resumePath: \"/path/to/resume.pdf\",\\n jobDescriptionUrl: \"https://example.com/job\",\\n stream: true,\\n onStream: (chunk) => process.stdout.write(chunk)\\n});\\n\\nconsole.log(analysis.atsScore);"
+            - button "Copy" [ref=e186]:
+              - img [ref=e187]
+              - text: Copy
+          - generic [ref=e190]:
+            - generic [ref=e191]: "Tip: Always use streaming for processing files to prevent timeout errors."
+            - generic [ref=e193]:
+              - img [ref=e194]
+              - text: Fast
+        - generic [ref=e196]:
+          - heading "Parameters" [level=3] [ref=e197]
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - generic [ref=e201]: resumePath
+                - generic [ref=e202]: string
+              - paragraph [ref=e203]: The absolute path or URL to the target resume file (PDF/DOCX).
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - generic [ref=e206]: jobDescriptionUrl
+                - generic [ref=e207]: string
+              - paragraph [ref=e208]: The URL of the target job posting to analyze against.
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: stream
+                - generic [ref=e212]: boolean
+              - paragraph [ref=e213]: Return results incrementally using Server-Sent Events.
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - generic [ref=e216]: includeCoverLetter
+                - generic [ref=e217]: boolean
+              - paragraph [ref=e218]: Optional. Generates a targeted cover letter based on analysis.
+        - generic [ref=e219]:
+          - generic [ref=e220]:
+            - heading "Related Tools" [level=3] [ref=e221]
+            - link "View schema" [ref=e222] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e223]
+              - text: View schema
+          - generic [ref=e226]:
+            - link "Playwright MCP Integration How the system parses complex job description pages." [ref=e227] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e228]:
+                - generic [ref=e229]: Playwright MCP Integration
+                - img [ref=e230]
+              - paragraph [ref=e233]: How the system parses complex job description pages.
+            - link "PDF Extraction Scripts Handling various resume formats and encodings." [ref=e234] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e235]:
+                - generic [ref=e236]: PDF Extraction Scripts
+                - img [ref=e237]
+              - paragraph [ref=e240]: Handling various resume formats and encodings.
+        - group [ref=e241]:
+          - generic "Errors & Troubleshooting" [ref=e242] [cursor=pointer]:
+            - generic [ref=e243]: Errors & Troubleshooting
+            - img [ref=e244]
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]: Was this page helpful?
+            - generic [ref=e250]: Your feedback improves our docs experience.
+          - generic [ref=e251]:
+            - button "Yes" [ref=e252]:
+              - img [ref=e253]
+              - text: "Yes"
+            - button "No" [ref=e255]:
+              - img [ref=e256]
+              - text: "No"
+        - generic [ref=e259]: Last updated 2 days ago • v1.4
+      - complementary [ref=e260]:
+        - generic [ref=e261]:
+          - generic [ref=e262]:
+            - generic [ref=e263]: On this page
+            - navigation [ref=e264]:
+              - link "Quickstart" [ref=e265] [cursor=pointer]:
+                - /url: "#quickstart"
+              - link "Parameters" [ref=e266] [cursor=pointer]:
+                - /url: "#parameters"
+              - link "Citations" [ref=e267] [cursor=pointer]:
+                - /url: "#citations"
+              - link "Errors" [ref=e268] [cursor=pointer]:
+                - /url: "#errors"
+          - generic [ref=e270]:
+            - img [ref=e271]
+            - generic [ref=e273]:
+              - generic [ref=e274]: SDKs
+              - paragraph [ref=e275]: Use our typed SDKs for Node and Python with built-in streaming helpers.
+              - link "Explore SDKs" [ref=e277] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e278]
+                - text: Explore SDKs
+          - generic [ref=e280]:
+            - generic [ref=e281]:
+              - generic [ref=e282]: RA
+              - generic [ref=e283]:
+                - generic [ref=e284]: Maintainer
+                - generic [ref=e285]: docs@resume-ai.com
+            - generic [ref=e286]:
+              - link "Share" [ref=e287] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e288]
+                - text: Share
+              - link "Subscribe" [ref=e294] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e295]
+                - text: Subscribe
+  - button "Open Next.js Dev Tools" [ref=e304] [cursor=pointer]:
+    - img [ref=e305]
+  - alert [ref=e308]

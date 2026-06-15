@@ -1,0 +1,263 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - link "TIDE retail commerce system" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e10]: TIDE
+        - generic [ref=e11]: retail commerce system
+      - generic [ref=e12]:
+        - link "MODULES" [ref=e13] [cursor=pointer]:
+          - /url: "#modules"
+        - link "WHY" [ref=e14] [cursor=pointer]:
+          - /url: "#why"
+        - link "SYSTEM" [ref=e15] [cursor=pointer]:
+          - /url: "#pipeline"
+        - link "PLATFORM" [ref=e16] [cursor=pointer]:
+          - /url: "#results"
+        - link "GET IN TOUCH" [ref=e18] [cursor=pointer]:
+          - /url: /app
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e23]: ATS OPTIMIZATION · LIVE PREVIEW · XIMENDING, TAIPEI
+      - heading "Everything connected. By design." [level=1] [ref=e26]:
+        - text: Everything
+        - text: connected.
+        - text: By design.
+      - paragraph [ref=e28]: A cashless-first retail commerce system — ordering, service, payment, invoicing, kitchen. Engineered as one, not assembled from parts.
+      - generic [ref=e30]: ">"
+      - generic [ref=e33]:
+        - link "GET IN TOUCH" [ref=e34] [cursor=pointer]:
+          - /url: /app
+        - link "EXPLORE SYSTEM" [ref=e35] [cursor=pointer]:
+          - /url: "#pipeline"
+          - text: EXPLORE SYSTEM
+          - img [ref=e36]
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - text: E-INVOICE NATIVE
+        - img [ref=e41]
+      - generic [ref=e43]:
+        - text: REAL-TIME KITCHEN
+        - img [ref=e44]
+      - generic [ref=e46]:
+        - text: ONE ORDER PIPELINE
+        - img [ref=e47]
+      - generic [ref=e49]:
+        - text: LIVE Q4 2026
+        - img [ref=e50]
+      - generic [ref=e52]:
+        - text: CASHLESS-FIRST
+        - img [ref=e53]
+      - generic [ref=e55]:
+        - text: E-INVOICE NATIVE
+        - img [ref=e56]
+      - generic [ref=e58]:
+        - text: REAL-TIME KITCHEN
+        - img [ref=e59]
+      - generic [ref=e61]:
+        - text: ONE ORDER PIPELINE
+        - img [ref=e62]
+      - generic [ref=e64]:
+        - text: LIVE Q4 2026
+        - img [ref=e65]
+      - generic [ref=e67]:
+        - text: CASHLESS-FIRST
+        - img [ref=e68]
+      - generic [ref=e70]:
+        - text: E-INVOICE NATIVE
+        - img [ref=e71]
+      - generic [ref=e73]:
+        - text: REAL-TIME KITCHEN
+        - img [ref=e74]
+      - generic [ref=e76]:
+        - text: ONE ORDER PIPELINE
+        - img [ref=e77]
+      - generic [ref=e79]:
+        - text: LIVE Q4 2026
+        - img [ref=e80]
+      - generic [ref=e82]:
+        - text: CASHLESS-FIRST
+        - img [ref=e83]
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]: "0"
+        - generic [ref=e89]: MCP TOOLS
+        - generic [ref=e90]: Concurrent specialized agents
+      - generic [ref=e91]:
+        - generic [ref=e92]: 0s
+        - generic [ref=e93]: ANALYSIS TIME
+        - generic [ref=e94]: Average turnaround time
+      - generic [ref=e95]:
+        - generic [ref=e96]: 0%
+        - generic [ref=e97]: LOCAL
+        - generic [ref=e98]: Privacy guaranteed
+    - generic [ref=e100]:
+      - generic [ref=e102]:
+        - generic [ref=e105]: 01 / MODULES
+        - heading "Everything inside" [level=2] [ref=e106]
+        - paragraph [ref=e107]: 同一套系統,涵蓋每一個營運環節
+        - paragraph [ref=e108]: Eight operational modules, one core, one dataset. No middleware between any of them.
+      - generic [ref=e109]:
+        - generic [ref=e111]:
+          - img [ref=e112]
+          - generic [ref=e115]:
+            - generic [ref=e116]: KIOSK
+            - generic [ref=e117]: 自助點餐
+        - generic [ref=e119]:
+          - img [ref=e120]
+          - generic [ref=e122]:
+            - generic [ref=e123]: MOBILE POS
+            - generic [ref=e124]: 手持服務
+        - generic [ref=e126]:
+          - img [ref=e127]
+          - generic [ref=e129]:
+            - generic [ref=e130]: PAYMENT
+            - generic [ref=e131]: 多軌收款
+        - generic [ref=e133]:
+          - img [ref=e134]
+          - generic [ref=e137]:
+            - generic [ref=e138]: E-INVOICE
+            - generic [ref=e139]: 電子發票
+        - generic [ref=e141]:
+          - img [ref=e142]
+          - generic [ref=e144]:
+            - generic [ref=e145]: KITCHEN
+            - generic [ref=e146]: 廚房看板
+        - generic [ref=e148]:
+          - img [ref=e149]
+          - generic [ref=e153]:
+            - generic [ref=e154]: INVENTORY
+            - generic [ref=e155]: 即時庫存
+        - generic [ref=e157]:
+          - img [ref=e158]
+          - generic [ref=e159]:
+            - generic [ref=e160]: REPORTING
+            - generic [ref=e161]: 統一報表
+        - generic [ref=e163]:
+          - img [ref=e164]
+          - generic [ref=e169]:
+            - generic [ref=e170]: FLEET MGMT
+            - generic [ref=e171]: 營運管理
+    - generic [ref=e173]:
+      - generic [ref=e175]:
+        - generic [ref=e178]: 02 / WHY
+        - heading "Built as one. Not assembled." [level=2] [ref=e179]
+        - paragraph [ref=e180]: 一體成形,而非拼裝整合
+        - paragraph [ref=e181]: A typical deployment stitches together a POS vendor, a payment terminal, an invoicing service and a kitchen display — four contracts, four points of failure. TIDE is engineered as a single continuous pipeline.
+      - generic [ref=e182]:
+        - generic [ref=e184]:
+          - img [ref=e186]
+          - heading "Payment, built in" [level=3] [ref=e188]
+          - paragraph [ref=e189]: 支付內建非外掛
+          - paragraph [ref=e190]: Contactless acceptance is embedded in certified hardware — no external terminals, no payment integration project. The merchant never has to think about it.
+        - generic [ref=e192]:
+          - img [ref=e194]
+          - heading "One source of record" [level=3] [ref=e195]
+          - paragraph [ref=e196]: 單一資料核心
+          - paragraph [ref=e197]: Orders, inventory, invoicing and reporting run on one core, one dataset. No middleware, no nightly sync, no reconciling three vendors' numbers.
+        - generic [ref=e199]:
+          - img [ref=e201]
+          - heading "Proven in production" [level=3] [ref=e204]
+          - paragraph [ref=e205]: 真實營運驗證
+          - paragraph [ref=e206]: Before TIDE ships to any merchant, it runs a live store — real transactions, real volume, real uptime — at our Ximending showroom. We sell what we operate.
+    - generic [ref=e208]:
+      - generic [ref=e210]:
+        - generic [ref=e213]: 03 / SYSTEM
+        - heading "One order. End to end." [level=2] [ref=e214]
+        - paragraph [ref=e215]: 一筆訂單的完整路徑
+        - paragraph [ref=e216]: Five stages, one system. Hover over each node to see its scope of operation.
+      - generic [ref=e217]:
+        - generic [ref=e218]:
+          - generic [ref=e222]:
+            - button "KIOSK 自助點餐" [ref=e223]:
+              - img [ref=e225]
+              - generic [ref=e228]:
+                - generic [ref=e229]: "01"
+                - generic [ref=e230]: KIOSK
+                - generic [ref=e231]: 自助點餐
+            - button "MOBILE POS 手持服務" [ref=e232]:
+              - img [ref=e234]
+              - generic [ref=e236]:
+                - generic [ref=e237]: "02"
+                - generic [ref=e238]: MOBILE POS
+                - generic [ref=e239]: 手持服務
+            - button "PAYMENT 多軌收款" [ref=e240]:
+              - img [ref=e242]
+              - generic [ref=e244]:
+                - generic [ref=e245]: "03"
+                - generic [ref=e246]: PAYMENT
+                - generic [ref=e247]: 多軌收款
+            - button "E-INVOICE 電子發票" [ref=e248]:
+              - img [ref=e250]
+              - generic [ref=e253]:
+                - generic [ref=e254]: "04"
+                - generic [ref=e255]: E-INVOICE
+                - generic [ref=e256]: 電子發票
+            - button "KITCHEN 廚房看板" [ref=e257]:
+              - img [ref=e259]
+              - generic [ref=e261]:
+                - generic [ref=e262]: "05"
+                - generic [ref=e263]: KITCHEN
+                - generic [ref=e264]: 廚房看板
+          - generic [ref=e265]:
+            - generic [ref=e266]:
+              - img [ref=e267]
+              - text: PIPELINE — 預設說明
+            - paragraph [ref=e270]: 付款授權完成的同一秒:發票雲端開立、庫存即時扣減、廚房看板亮單。三項作業並行觸發,無中介軟體、無批次同步——這是單一系統架構的直接結果。
+        - paragraph [ref=e271]: THE MOVING SIGNAL TRACES ONE ORDER THROUGH THE SYSTEM — 光點即一筆訂單的系統路徑
+    - generic [ref=e273]:
+      - generic [ref=e274]:
+        - generic [ref=e275]: 04 / RESULTS
+        - heading "Six panels. One analysis." [level=2] [ref=e277]
+        - paragraph [ref=e278]: Everything you need to land the role
+        - paragraph [ref=e279]: Every result is generated specifically for your resume against the target job description. No generic advice — all context-aware output from 8 specialized MCP tools.
+      - generic [ref=e281]:
+        - generic [ref=e282]:
+          - generic [ref=e287]: resume-ai — analysis.results
+          - generic [ref=e288]: READY
+        - generic [ref=e290]:
+          - generic [ref=e292]:
+            - generic [ref=e293]: ATS SCORE
+            - generic [ref=e294]:
+              - generic [ref=e295]: Keyword match % vs job description
+              - generic [ref=e296]: Color-coded matched and missing keyword tags
+          - generic [ref=e298]:
+            - generic [ref=e299]: IMPROVEMENTS
+            - generic [ref=e300]:
+              - generic [ref=e301]: Word count · Contact info · Action verbs
+              - generic [ref=e302]: Specific, actionable tips to strengthen your resume
+          - generic [ref=e304]:
+            - generic [ref=e305]: INTERVIEW
+            - generic [ref=e306]:
+              - generic [ref=e307]: Technical questions + HR behavioral questions
+              - generic [ref=e308]: Generated from matched and missing skills in the job
+          - generic [ref=e310]:
+            - generic [ref=e311]: SKILL GAP
+            - generic [ref=e312]:
+              - generic [ref=e313]: Phase-based learning roadmap
+              - generic [ref=e314]: Prioritized list of skills to acquire for this role
+          - generic [ref=e316]:
+            - generic [ref=e317]: COVER LETTER
+            - generic [ref=e318]:
+              - generic [ref=e319]: Personalized template using matched keywords
+              - generic [ref=e320]: Ready to copy, paste, and customize
+          - generic [ref=e322]:
+            - generic [ref=e323]: LINKEDIN
+            - generic [ref=e324]:
+              - generic [ref=e325]: Headline · Summary · General profile tips
+              - generic [ref=e326]: Only shown when LinkedIn profile text is provided
+      - generic [ref=e328]:
+        - heading "Ready to land the role?" [level=2] [ref=e329]
+        - generic [ref=e330]:
+          - link "START FREE ANALYSIS" [ref=e331] [cursor=pointer]:
+            - /url: /app
+          - link "VIEW HISTORY" [ref=e332] [cursor=pointer]:
+            - /url: /history
+        - paragraph [ref=e333]: NO ACCOUNT REQUIRED · NO DATA STORED · 100% FREE
+  - contentinfo [ref=e334]:
+    - generic [ref=e335]:
+      - generic [ref=e336]: YOU UPLOAD THE DATA; WE BUILD THE TIDE.
+      - generic [ref=e337]:
+        - img [ref=e338]
+        - text: RESUME AI v1.0 · MCP INTEGRATION · © 2026
