@@ -1,0 +1,323 @@
+- generic [ref=e2]:
+  - iframe [ref=e8]:
+    - generic [ref=f1e3]:
+      - banner [ref=f1e5]:
+        - navigation [ref=f1e6]:
+          - link "TIDE retail commerce system" [ref=f1e7] [cursor=pointer]:
+            - /url: "#top"
+            - img [ref=f1e9]
+            - generic [ref=f1e11]: TIDE
+            - generic [ref=f1e12]: retail commerce system
+          - generic [ref=f1e13]:
+            - link "MODULES" [ref=f1e14] [cursor=pointer]:
+              - /url: "#modules"
+            - link "WHY" [ref=f1e15] [cursor=pointer]:
+              - /url: "#why"
+            - link "SYSTEM" [ref=f1e16] [cursor=pointer]:
+              - /url: "#system"
+            - link "PLATFORM" [ref=f1e17] [cursor=pointer]:
+              - /url: "#platform"
+            - link "PROGRAM" [ref=f1e18] [cursor=pointer]:
+              - /url: "#program"
+            - link "GET IN TOUCH" [ref=f1e19] [cursor=pointer]:
+              - /url: "#contact"
+      - main [ref=f1e20]:
+        - generic [ref=f1e22]:
+          - generic [ref=f1e24]: CASHLESS-FIRST · LIVE Q4 2026 · XIMENDING, TAIPEI
+          - heading "Everything connected. By design." [level=1] [ref=f1e27]:
+            - text: Everything
+            - text: connected.
+            - text: By design.
+          - paragraph [ref=f1e29]: A cashless-first retail commerce system — ordering, service, payment, invoicing, kitchen. Engineered as one, not assembled from parts.
+          - generic [ref=f1e31]: ">ENGINEERE"
+          - generic [ref=f1e34]:
+            - link "GET IN TOUCH" [ref=f1e35] [cursor=pointer]:
+              - /url: "#contact"
+            - link "EXPLORE SYSTEM" [ref=f1e36] [cursor=pointer]:
+              - /url: "#system"
+              - text: EXPLORE SYSTEM
+              - img [ref=f1e38]
+        - generic [ref=f1e41]:
+          - generic [ref=f1e42]:
+            - text: CASHLESS-FIRST
+            - img [ref=f1e44]
+          - generic [ref=f1e46]:
+            - text: EMBEDDED PAYMENT
+            - img [ref=f1e48]
+          - generic [ref=f1e50]:
+            - text: ANDROID 13+ GMS
+            - img [ref=f1e52]
+          - generic [ref=f1e54]:
+            - text: ZERO EXTERNAL READERS
+            - img [ref=f1e56]
+          - generic [ref=f1e58]:
+            - text: E-INVOICE NATIVE
+            - img [ref=f1e60]
+          - generic [ref=f1e62]:
+            - text: REAL-TIME KITCHEN
+            - img [ref=f1e64]
+          - generic [ref=f1e66]:
+            - text: ONE ORDER PIPELINE
+            - img [ref=f1e68]
+          - generic [ref=f1e70]:
+            - text: LIVE Q4 2026
+            - img [ref=f1e72]
+          - generic [ref=f1e74]:
+            - text: CASHLESS-FIRST
+            - img [ref=f1e76]
+          - generic [ref=f1e78]:
+            - text: EMBEDDED PAYMENT
+            - img [ref=f1e80]
+          - generic [ref=f1e82]:
+            - text: ANDROID 13+ GMS
+            - img [ref=f1e84]
+          - generic [ref=f1e86]:
+            - text: ZERO EXTERNAL READERS
+            - img [ref=f1e88]
+          - generic [ref=f1e90]:
+            - text: E-INVOICE NATIVE
+            - img [ref=f1e92]
+          - generic [ref=f1e94]:
+            - text: REAL-TIME KITCHEN
+            - img [ref=f1e96]
+          - generic [ref=f1e98]:
+            - text: ONE ORDER PIPELINE
+            - img [ref=f1e100]
+          - generic [ref=f1e102]:
+            - text: LIVE Q4 2026
+            - img [ref=f1e104]
+        - generic [ref=f1e107]:
+          - generic [ref=f1e108]:
+            - generic [ref=f1e109]: "0"
+            - generic [ref=f1e110]: CASH REGISTERS
+            - generic [ref=f1e111]: 收銀機
+          - generic [ref=f1e112]:
+            - generic [ref=f1e113]: "0"
+            - generic [ref=f1e114]: EXTERNAL READERS
+            - generic [ref=f1e115]: 外掛讀卡機
+          - generic [ref=f1e116]:
+            - generic [ref=f1e117]: 0%
+            - generic [ref=f1e118]: DIGITAL RAILS
+            - generic [ref=f1e119]: 數位收款
+        - generic [ref=f1e121]:
+          - generic [ref=f1e122]:
+            - generic [ref=f1e123]: 01 / MODULES
+            - heading "Everything inside" [level=2] [ref=f1e125]
+            - paragraph [ref=f1e126]: 同一套系統,涵蓋每一個營運環節
+            - paragraph [ref=f1e127]: Eight operational modules, one core, one dataset. No middleware between any of them.
+          - generic [ref=f1e128]:
+            - generic [ref=f1e130]:
+              - img [ref=f1e132]
+              - generic [ref=f1e137]: KIOSK
+              - generic [ref=f1e138]: 自助點餐
+            - generic [ref=f1e140]:
+              - img [ref=f1e142]
+              - generic [ref=f1e145]: MOBILE POS
+              - generic [ref=f1e146]: 手持服務
+            - generic [ref=f1e148]:
+              - img [ref=f1e150]
+              - generic [ref=f1e154]: PAYMENT
+              - generic [ref=f1e155]: 多軌收款
+            - generic [ref=f1e157]:
+              - img [ref=f1e159]
+              - generic [ref=f1e163]: E-INVOICE
+              - generic [ref=f1e164]: 電子發票
+            - generic [ref=f1e166]:
+              - img [ref=f1e168]
+              - generic [ref=f1e172]: KITCHEN
+              - generic [ref=f1e173]: 廚房看板
+            - generic [ref=f1e175]:
+              - img [ref=f1e177]
+              - generic [ref=f1e179]: INVENTORY
+              - generic [ref=f1e180]: 即時庫存
+            - generic [ref=f1e182]:
+              - img [ref=f1e184]
+              - generic [ref=f1e187]: REPORTING
+              - generic [ref=f1e188]: 統一報表
+            - generic [ref=f1e190]:
+              - img [ref=f1e192]
+              - generic [ref=f1e196]: FLEET MGMT
+              - generic [ref=f1e197]: 裝置管理
+        - generic [ref=f1e199]:
+          - generic [ref=f1e200]:
+            - generic [ref=f1e201]: 02 / WHY
+            - heading "Built as one. Not assembled." [level=2] [ref=f1e203]
+            - paragraph [ref=f1e204]: 一體成形,而非拼裝整合
+            - paragraph [ref=f1e205]: A typical deployment stitches together a POS vendor, a payment terminal, an invoicing service and a kitchen display — four contracts, four points of failure. TIDE is engineered as a single system.
+          - generic [ref=f1e206]:
+            - generic [ref=f1e208]:
+              - img [ref=f1e211]
+              - heading "Payment, built in" [level=3] [ref=f1e216]
+              - paragraph [ref=f1e217]: 支付內建,非外掛
+              - paragraph [ref=f1e218]: Contactless acceptance is embedded in certified hardware — no external terminals, no payment integration project. The merchant never has to think about it.
+            - generic [ref=f1e220]:
+              - img [ref=f1e223]
+              - heading "One source of record" [level=3] [ref=f1e227]
+              - paragraph [ref=f1e228]: 單一資料核心
+              - paragraph [ref=f1e229]: Orders, inventory, invoicing and reporting run on one core, one dataset. No middleware, no nightly sync, no reconciling three vendors' numbers.
+            - generic [ref=f1e231]:
+              - img [ref=f1e234]
+              - heading "Proven in production" [level=3] [ref=f1e238]
+              - paragraph [ref=f1e239]: 真實營運驗證
+              - paragraph [ref=f1e240]: Before TIDE ships to any merchant, it runs a live store — real transactions, real volume, real uptime — at our Ximending showroom. We sell what we operate.
+        - generic [ref=f1e242]:
+          - generic [ref=f1e243]:
+            - generic [ref=f1e244]: 03 / SYSTEM
+            - heading "One order. End to end." [level=2] [ref=f1e246]
+            - paragraph [ref=f1e247]: 一筆訂單的完整路徑
+            - paragraph [ref=f1e248]: Five stages, one system. Hover over each node to see its scope of operation.
+          - generic [ref=f1e249]:
+            - generic [ref=f1e250]:
+              - generic [ref=f1e254]:
+                - button "KIOSK 自助點餐" [ref=f1e255] [cursor=pointer]:
+                  - img [ref=f1e258]
+                  - generic [ref=f1e263]:
+                    - generic [ref=f1e264]: "01"
+                    - generic [ref=f1e265]: KIOSK
+                    - generic [ref=f1e266]: 自助點餐
+                - button "MOBILE POS 手持服務" [ref=f1e267] [cursor=pointer]:
+                  - img [ref=f1e270]
+                  - generic [ref=f1e273]:
+                    - generic [ref=f1e274]: "02"
+                    - generic [ref=f1e275]: MOBILE POS
+                    - generic [ref=f1e276]: 手持服務
+                - button "PAYMENT 多軌收款" [ref=f1e277] [cursor=pointer]:
+                  - img [ref=f1e280]
+                  - generic [ref=f1e284]:
+                    - generic [ref=f1e285]: "03"
+                    - generic [ref=f1e286]: PAYMENT
+                    - generic [ref=f1e287]: 多軌收款
+                - button "E-INVOICE 電子發票" [ref=f1e288] [cursor=pointer]:
+                  - img [ref=f1e291]
+                  - generic [ref=f1e295]:
+                    - generic [ref=f1e296]: "04"
+                    - generic [ref=f1e297]: E-INVOICE
+                    - generic [ref=f1e298]: 電子發票
+                - button "KITCHEN 廚房看板" [ref=f1e299] [cursor=pointer]:
+                  - img [ref=f1e302]
+                  - generic [ref=f1e306]:
+                    - generic [ref=f1e307]: "05"
+                    - generic [ref=f1e308]: KITCHEN
+                    - generic [ref=f1e309]: 廚房看板
+              - generic [ref=f1e310]:
+                - generic [ref=f1e311]:
+                  - img [ref=f1e313]
+                  - text: PIPELINE — 預設說明
+                - paragraph [ref=f1e318]: 付款授權完成的同一秒:發票雲端開立、庫存即時扣減、廚房看板亮單。三項作業並行觸發,無中介軟體、無批次同步——這是單一系統架構的直接結果。
+            - paragraph [ref=f1e319]: THE MOVING SIGNAL TRACES ONE ORDER THROUGH THE SYSTEM — 光點即一筆訂單的系統路徑
+        - generic [ref=f1e321]:
+          - generic [ref=f1e322]:
+            - generic [ref=f1e323]: 04 / PLATFORM
+            - heading "Deployment specification." [level=2] [ref=f1e325]
+            - paragraph [ref=f1e326]: 部署規格
+            - paragraph [ref=f1e327]: "TIDE ships as software on payment-certified commercial hardware. Reference specification for the showroom deployment:"
+          - generic [ref=f1e328]:
+            - generic [ref=f1e329]:
+              - generic [ref=f1e330]:
+                - generic [ref=f1e335]: tide-core — deployment.spec
+                - generic [ref=f1e336]: SYSTEM NOMINAL
+              - generic [ref=f1e338]:
+                - generic [ref=f1e340]:
+                  - generic [ref=f1e341]: RUNTIME
+                  - generic [ref=f1e342]:
+                    - generic [ref=f1e343]: Android 13+ · GMS-certified commercial devices
+                    - generic [ref=f1e344]: 單一 Android 應用層,跨自助機、手持與廚房顯示部署
+                - generic [ref=f1e346]:
+                  - generic [ref=f1e347]: PAYMENT
+                  - generic [ref=f1e348]:
+                    - generic [ref=f1e349]: Embedded contactless acceptance · certified execution environment · multi-rail
+                    - generic [ref=f1e350]: 感應收款內建機身,授權於認證環境內完成;系統管理訂單與交易狀態,不經手卡號
+                - generic [ref=f1e352]:
+                  - generic [ref=f1e353]: FLEET MGMT
+                  - generic [ref=f1e354]:
+                    - generic [ref=f1e355]: Zero-touch provisioning · kiosk lockdown · silent OTA updates
+                    - generic [ref=f1e356]: 裝置出廠配置、營業模式鎖定與靜默遠端更新
+                - generic [ref=f1e358]:
+                  - generic [ref=f1e359]: E-INVOICE
+                  - generic [ref=f1e360]:
+                    - generic [ref=f1e361]: Cloud issuance, MOF-compliant · asynchronous, non-blocking
+                    - generic [ref=f1e362]: 符合財政部電子發票規範,雲端開立、非同步處理、不阻塞結帳
+                - generic [ref=f1e364]:
+                  - generic [ref=f1e365]: KITCHEN
+                  - generic [ref=f1e366]:
+                    - generic [ref=f1e367]: IP65-rated display class · PoE-powered · real-time order push
+                    - generic [ref=f1e368]: 不鏽鋼防水等級顯示設備、網路線供電、付款即時亮單
+                - generic [ref=f1e370]:
+                  - generic [ref=f1e371]: CORE
+                  - generic [ref=f1e372]:
+                    - generic [ref=f1e373]: Single order pipeline · real-time inventory · unified reporting
+                    - generic [ref=f1e374]: 單一訂單管線:庫存、發票、報表同源,無批次同步
+            - paragraph [ref=f1e375]: HARDWARE PARTNER SELECTION IN FINAL VALIDATION — 硬體合作夥伴選型進入最終實機驗證階段
+        - generic [ref=f1e377]:
+          - generic [ref=f1e378]:
+            - generic [ref=f1e379]: 05 / PROGRAM
+            - heading "Operating proof. Not a demo." [level=2] [ref=f1e381]
+            - paragraph [ref=f1e382]: 營運實證,而非展示樣品
+            - paragraph [ref=f1e383]: Q4 2026, Ximending, Taipei — a fully operational retail store running every transaction on TIDE, in a company-owned property. The resident brand will be announced at opening.
+          - generic [ref=f1e384]:
+            - generic [ref=f1e385]:
+              - generic [ref=f1e387]:
+                - generic [ref=f1e389]:
+                  - generic [ref=f1e390]: H1 2026
+                  - generic [ref=f1e391]: COMPLETE
+                - heading "System architecture finalized" [level=3] [ref=f1e392]
+                - paragraph [ref=f1e393]: 端到端系統架構、金流模型與硬體規格定案。
+              - generic [ref=f1e394]:
+                - generic [ref=f1e396]:
+                  - generic [ref=f1e397]: H2 2026
+                  - generic [ref=f1e398]: IN PROGRESS
+                - heading "Hardware integration & certification" [level=3] [ref=f1e399]
+                - paragraph [ref=f1e400]: 實機整合、支付認證流程與全交易劇本驗證。
+              - generic [ref=f1e401]:
+                - generic [ref=f1e403]:
+                  - generic [ref=f1e404]: Q4 2026
+                  - generic [ref=f1e405]: SCHEDULED
+                - heading "Showroom opening, live operation" [level=3] [ref=f1e406]
+                - paragraph [ref=f1e407]: 西門町示範店啟用,進入真實營運與量測階段。
+              - generic [ref=f1e408]:
+                - generic [ref=f1e410]:
+                  - generic [ref=f1e411]: "2027"
+                  - generic [ref=f1e412]: PLANNED
+                - heading "General availability" [level=3] [ref=f1e413]
+                - paragraph [ref=f1e414]: 營運驗證完成後,以完整方案對外交付。
+            - generic [ref=f1e416]:
+              - generic [ref=f1e417]:
+                - img [ref=f1e419]
+                - text: COUNTDOWN — TO OPENING
+              - generic [ref=f1e423]:
+                - generic [ref=f1e424]:
+                  - generic [ref=f1e425]: "173"
+                  - generic [ref=f1e426]: DAYS
+                - generic [ref=f1e427]:
+                  - generic [ref=f1e428]: "20"
+                  - generic [ref=f1e429]: HOURS
+                - generic [ref=f1e430]:
+                  - generic [ref=f1e431]: "21"
+                  - generic [ref=f1e432]: MIN
+                - generic [ref=f1e433]:
+                  - generic [ref=f1e434]: "20"
+                  - generic [ref=f1e435]: SEC
+              - generic [ref=f1e436]:
+                - img [ref=f1e438]
+                - text: XIMENDING, TAIPEI — Q4 2026
+        - generic [ref=f1e444]:
+          - generic [ref=f1e445]: CONTACT
+          - heading "Ride the next wave with us." [level=2] [ref=f1e446]
+          - paragraph [ref=f1e447]: 留下信箱,系統上線時第一時間通知您。
+          - generic [ref=f1e448]:
+            - textbox "Email address" [ref=f1e449]:
+              - /placeholder: you@company.com
+            - button "NOTIFY ME" [ref=f1e450] [cursor=pointer]
+          - status [ref=f1e451]
+          - link "info@72-studio.com" [ref=f1e452] [cursor=pointer]:
+            - /url: mailto:info@72-studio.com
+            - img [ref=f1e454]
+            - text: info@72-studio.com
+      - contentinfo [ref=f1e458]:
+        - generic [ref=f1e459]:
+          - generic [ref=f1e460]: YOU RIDE THE WAVES; WE BUILD THE TIDE.
+          - generic [ref=f1e461]:
+            - img [ref=f1e463]
+            - text: TIDE CORE v0.9 · INTEGRATION BUILD · © 2026 TIDE
+  - region "Notifications (F8)":
+    - list

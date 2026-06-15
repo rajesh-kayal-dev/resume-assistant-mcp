@@ -1,0 +1,256 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - link "RESUME AI mcp-powered analysis" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e10]: RESUME AI
+        - generic [ref=e11]: mcp-powered analysis
+      - generic [ref=e12]:
+        - link "MODULES" [ref=e13] [cursor=pointer]:
+          - /url: "#modules"
+        - link "SYSTEM" [ref=e14] [cursor=pointer]:
+          - /url: "#pipeline"
+        - link "PLATFORM" [ref=e15] [cursor=pointer]:
+          - /url: "#results"
+        - link "ANALYZE NOW" [ref=e16] [cursor=pointer]:
+          - /url: /app
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e21]: ATS OPTIMIZATION · LIVE PREVIEW · 100% PRIVATE
+      - heading "Everything analyzed. In seconds." [level=1] [ref=e24]:
+        - text: Everything
+        - text: analyzed.
+        - text: In seconds.
+      - paragraph [ref=e26]: A comprehensive resume analysis system — keyword matching, skill gap detection, interview prep, and cover letter generation. Powered by 8 concurrent MCP tools.
+      - generic [ref=e28]: ">"
+      - generic [ref=e31]:
+        - link "START ANALYSIS" [ref=e32] [cursor=pointer]:
+          - /url: /app
+        - link "EXPLORE PIPELINE" [ref=e33] [cursor=pointer]:
+          - /url: "#pipeline"
+          - text: EXPLORE PIPELINE
+          - img [ref=e34]
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - text: FILE PARSING
+        - img [ref=e39]
+      - generic [ref=e41]:
+        - text: URL EXTRACTION
+        - img [ref=e42]
+      - generic [ref=e44]:
+        - text: ATS SCORING
+        - img [ref=e45]
+      - generic [ref=e47]:
+        - text: KEYWORD MATCHING
+        - img [ref=e48]
+      - generic [ref=e50]:
+        - text: SKILL GAP ANALYSIS
+        - img [ref=e51]
+      - generic [ref=e53]:
+        - text: INTERVIEW GENERATOR
+        - img [ref=e54]
+      - generic [ref=e56]:
+        - text: COVER LETTER WRITER
+        - img [ref=e57]
+      - generic [ref=e59]:
+        - text: LINKEDIN AUDIT
+        - img [ref=e60]
+      - generic [ref=e62]:
+        - text: FILE PARSING
+        - img [ref=e63]
+      - generic [ref=e65]:
+        - text: URL EXTRACTION
+        - img [ref=e66]
+      - generic [ref=e68]:
+        - text: ATS SCORING
+        - img [ref=e69]
+      - generic [ref=e71]:
+        - text: KEYWORD MATCHING
+        - img [ref=e72]
+      - generic [ref=e74]:
+        - text: SKILL GAP ANALYSIS
+        - img [ref=e75]
+      - generic [ref=e77]:
+        - text: INTERVIEW GENERATOR
+        - img [ref=e78]
+      - generic [ref=e80]:
+        - text: COVER LETTER WRITER
+        - img [ref=e81]
+      - generic [ref=e83]:
+        - text: LINKEDIN AUDIT
+        - img [ref=e84]
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]: "0"
+        - generic [ref=e90]: MCP TOOLS
+        - generic [ref=e91]: Concurrent specialized agents
+      - generic [ref=e92]:
+        - generic [ref=e93]: 0s
+        - generic [ref=e94]: ANALYSIS TIME
+        - generic [ref=e95]: Average turnaround time
+      - generic [ref=e96]:
+        - generic [ref=e97]: 0%
+        - generic [ref=e98]: LOCAL
+        - generic [ref=e99]: Privacy guaranteed
+    - generic [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]: 01 / MODULES
+        - heading "Everything inside" [level=2] [ref=e105]
+        - paragraph [ref=e106]: 同一套系統,涵蓋每一個營運環節
+        - paragraph [ref=e107]: Eight operational modules, one core AI engine. No waiting between steps.
+      - generic [ref=e108]:
+        - generic [ref=e110]:
+          - img [ref=e111]
+          - generic [ref=e114]: PARSE RESUME
+          - generic [ref=e115]: PDF, DOCX, TXT
+        - generic [ref=e117]:
+          - img [ref=e118]
+          - generic [ref=e121]: FETCH JOB URL
+          - generic [ref=e122]: Auto-extraction
+        - generic [ref=e124]:
+          - img [ref=e125]
+          - generic [ref=e129]: ATS SCORING
+          - generic [ref=e130]: Keyword matching
+        - generic [ref=e132]:
+          - img [ref=e133]
+          - generic [ref=e135]: IMPROVEMENTS
+          - generic [ref=e136]: Actionable tips
+        - generic [ref=e138]:
+          - img [ref=e139]
+          - generic [ref=e141]: INTERVIEW PREP
+          - generic [ref=e142]: Technical + HR Qs
+        - generic [ref=e144]:
+          - img [ref=e145]
+          - generic [ref=e146]: SKILL GAP
+          - generic [ref=e147]: Learning roadmap
+        - generic [ref=e149]:
+          - img [ref=e150]
+          - generic [ref=e153]: COVER LETTER
+          - generic [ref=e154]: Tailored template
+        - generic [ref=e156]:
+          - img [ref=e157]
+          - generic [ref=e163]: LINKEDIN OPT.
+          - generic [ref=e164]: Profile optimizer
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - generic [ref=e168]: 02 / WHY
+        - heading "Built as one. Not assembled." [level=2] [ref=e170]
+        - paragraph [ref=e171]: 一體成形,而非拼裝整合
+        - paragraph [ref=e172]: Most tools give you a generic chat box. Resume AI is engineered as a single analytical pipeline designed specifically to get you hired.
+      - generic [ref=e173]:
+        - generic [ref=e175]:
+          - img [ref=e177]
+          - heading "Powered by MCP" [level=3] [ref=e179]
+          - paragraph [ref=e180]: 基於 MCP 架構
+          - paragraph [ref=e181]: Instead of monolithic AI prompts, our system orchestrates multiple specialized MCP tools running concurrently for unmatched accuracy.
+        - generic [ref=e183]:
+          - img [ref=e185]
+          - heading "100% Local Processing" [level=3] [ref=e188]
+          - paragraph [ref=e189]: 完全本地化處理
+          - paragraph [ref=e190]: Your resume and job data never leave your browser. Analysis runs instantly without storing your personal information on our servers.
+        - generic [ref=e192]:
+          - img [ref=e194]
+          - heading "Context-Aware Results" [level=3] [ref=e196]
+          - paragraph [ref=e197]: 具備上下文感知的結果
+          - paragraph [ref=e198]: Generic advice is useless. Every interview question, skill gap, and cover letter is generated specifically for your resume against the target job.
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - generic [ref=e202]: 03 / SYSTEM
+        - heading "One upload. End to end." [level=2] [ref=e204]
+        - paragraph [ref=e205]: 一筆履歷的完整路徑
+        - paragraph [ref=e206]: Five stages, one system. Hover over each node to see its scope of operation in our AI pipeline.
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - generic [ref=e212]:
+            - button "UPLOAD 上傳履歷" [ref=e213]:
+              - img [ref=e215]
+              - generic [ref=e218]:
+                - generic [ref=e219]: "01"
+                - generic [ref=e220]: UPLOAD
+                - generic [ref=e221]: 上傳履歷
+            - button "TARGET 目標職缺" [ref=e222]:
+              - img [ref=e224]
+              - generic [ref=e227]:
+                - generic [ref=e228]: "02"
+                - generic [ref=e229]: TARGET
+                - generic [ref=e230]: 目標職缺
+            - button "ANALYZE MCP 分析" [ref=e231]:
+              - img [ref=e233]
+              - generic [ref=e236]:
+                - generic [ref=e237]: "03"
+                - generic [ref=e238]: ANALYZE
+                - generic [ref=e239]: MCP 分析
+            - button "GENERATE 產出結果" [ref=e240]:
+              - img [ref=e242]
+              - generic [ref=e245]:
+                - generic [ref=e246]: "04"
+                - generic [ref=e247]: GENERATE
+                - generic [ref=e248]: 產出結果
+            - button "APPLY 準備投遞" [ref=e249]:
+              - img [ref=e251]
+              - generic [ref=e254]:
+                - generic [ref=e255]: "05"
+                - generic [ref=e256]: APPLY
+                - generic [ref=e257]: 準備投遞
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - img [ref=e260]
+              - text: PIPELINE — 預設說明
+            - paragraph [ref=e267]: Upload a resume and paste a job URL — five MCP AI tools run in parallel, delivering ATS scores, interview questions, skill gaps, and a cover letter in seconds.
+        - paragraph [ref=e268]: THE MOVING SIGNAL TRACES DATA THROUGH THE SYSTEM — 光點即資料的系統路徑
+    - generic [ref=e270]:
+      - generic [ref=e271]:
+        - generic [ref=e272]: 04 / RESULTS
+        - heading "Six panels. One analysis." [level=2] [ref=e274]
+        - paragraph [ref=e275]: Everything you need to land the role
+        - paragraph [ref=e276]: Every result is generated specifically for your resume against the target job description. No generic advice — all context-aware output from 8 specialized MCP tools.
+      - generic [ref=e278]:
+        - generic [ref=e279]:
+          - generic [ref=e284]: resume-ai — analysis.results
+          - generic [ref=e285]: READY
+        - generic [ref=e287]:
+          - generic [ref=e289]:
+            - generic [ref=e290]: ATS SCORE
+            - generic [ref=e291]:
+              - generic [ref=e292]: Keyword match % vs job description
+              - generic [ref=e293]: Color-coded matched and missing keyword tags
+          - generic [ref=e295]:
+            - generic [ref=e296]: IMPROVEMENTS
+            - generic [ref=e297]:
+              - generic [ref=e298]: Word count · Contact info · Action verbs
+              - generic [ref=e299]: Specific, actionable tips to strengthen your resume
+          - generic [ref=e301]:
+            - generic [ref=e302]: INTERVIEW
+            - generic [ref=e303]:
+              - generic [ref=e304]: Technical questions + HR behavioral questions
+              - generic [ref=e305]: Generated from matched and missing skills in the job
+          - generic [ref=e307]:
+            - generic [ref=e308]: SKILL GAP
+            - generic [ref=e309]:
+              - generic [ref=e310]: Phase-based learning roadmap
+              - generic [ref=e311]: Prioritized list of skills to acquire for this role
+          - generic [ref=e313]:
+            - generic [ref=e314]: COVER LETTER
+            - generic [ref=e315]:
+              - generic [ref=e316]: Personalized template using matched keywords
+              - generic [ref=e317]: Ready to copy, paste, and customize
+          - generic [ref=e319]:
+            - generic [ref=e320]: LINKEDIN
+            - generic [ref=e321]:
+              - generic [ref=e322]: Headline · Summary · General profile tips
+              - generic [ref=e323]: Only shown when LinkedIn profile text is provided
+      - generic [ref=e325]:
+        - heading "Ready to land the role?" [level=2] [ref=e326]
+        - generic [ref=e327]:
+          - link "START FREE ANALYSIS" [ref=e328] [cursor=pointer]:
+            - /url: /app
+          - link "VIEW HISTORY" [ref=e329] [cursor=pointer]:
+            - /url: /history
+        - paragraph [ref=e330]: NO ACCOUNT REQUIRED · NO DATA STORED · 100% FREE
+  - contentinfo [ref=e331]:
+    - generic [ref=e332]:
+      - generic [ref=e333]: YOU UPLOAD THE DATA; WE BUILD THE TIDE.
+      - generic [ref=e334]:
+        - img [ref=e335]
+        - text: RESUME AI v1.0 · MCP INTEGRATION · © 2026

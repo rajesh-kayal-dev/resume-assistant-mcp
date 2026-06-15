@@ -1,0 +1,177 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+/* Gumroad-style: cream paper background, pure black ink */
+body {
+  background: #f4f4f0;
+  color: #000;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-mono { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+
+/* chunky display type, gumroad-style */
+h1, h2 { font-weight: 800 !important; }
+
+/* grid backdrop — light paper grid */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* scanline overlay — disabled in the light gumroad theme */
+.scanlines::after { content: none; }
+
+/* typewriter caret */
+.caret { display: inline-block; width: 0.6em; animation: blink 0.9s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* marquee */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+/* marquee strip → gumroad pink band with black text */
+div:has(> .marquee-track) { background: #ff90e8 !important; border-color: #000 !important; }
+div:has(> .marquee-track) span { color: #000 !important; }
+
+/* scroll reveal */
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* pipeline signal — pink chip with black outline */
+@keyframes signal { 0% { left: 0%; opacity: 0; } 5% { opacity: 1; } 95% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+.signal-dot {
+  position: absolute; top: 50%; transform: translate(-50%, -50%);
+  width: 12px; height: 12px; border-radius: 9999px;
+  background: #ff90e8; border: 2px solid #000; box-shadow: none;
+  animation: signal 6s linear infinite;
+}
+
+/* node pulse — pink ring */
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(255,144,232,0.6); } 100% { box-shadow: 0 0 0 14px rgba(255,144,232,0); } }
+.node-active { animation: pulse-ring 1.6s ease-out infinite; }
+
+/* hero title — no glow in light theme */
+.hero-title { text-shadow: none; }
+
+::selection { background: #ff90e8; color: #000; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f4f4f0; }
+::-webkit-scrollbar-thumb { background: #000; border-radius: 0; }
+
+/* ==========================================================
+   GUMROAD THEME OVERRIDE LAYER
+   Remaps the original dark/cyan utility classes (in locked
+   components) onto the gumroad palette:
+   cream #f4f4f0 · white cards · black ink · pink #ff90e8 · yellow #ffc900
+   ========================================================== */
+
+/* ---------- surfaces: dark panels → white cards ---------- */
+[class*="bg-[#04060a]"] { background-color: #fff !important; }
+[class*="bg-[#060a12]"] { background-color: #fff !important; }
+[class*="bg-[#03050a]"] { background-color: #fff !important; }
+[class*="bg-[#070c14]"] { background-color: #ffc900 !important; } /* terminal title bar */
+.bg-slate-900 { background-color: #000 !important; }              /* module grid lines */
+
+[class*="bg-cyan-950/40"] { background-color: rgba(0,0,0,0.1) !important; }   /* progress track */
+[class*="bg-cyan-950/30"] { background-color: #ffc900 !important; box-shadow: 3px 3px 0 #000; } /* hero badge */
+
+/* hover tints → soft pink */
+[class*="hover:bg-cyan-950/20"]:hover,
+[class*="hover:bg-cyan-950/15"]:hover { background-color: #ffe9f9 !important; }
+[class*="hover:bg-cyan-500/10"]:hover { background-color: #ff90e8 !important; }
+[class*="hover:bg-cyan-300"]:hover { background-color: #ff90e8 !important; }
+
+/* hero radial glow → pink wash */
+#top > .pointer-events-none {
+  background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(255,144,232,0.35), transparent 70%) !important;
+}
+
+/* ---------- ink: light text → black ---------- */
+.text-white { color: #000 !important; }
+[class*="text-[#04060a]"] { color: #000 !important; }
+.text-cyan-200, .text-cyan-300, .text-cyan-400, .text-cyan-500,
+.text-cyan-700, .text-cyan-800 { color: #000 !important; }
+.text-cyan-600 { color: rgba(0,0,0,0.45) !important; }
+[class*="text-cyan-200/"] { color: rgba(0,0,0,0.6) !important; }
+
+.text-slate-200 { color: #111 !important; }
+.text-slate-300 { color: rgba(0,0,0,0.78) !important; }
+.text-slate-400 { color: rgba(0,0,0,0.66) !important; }
+.text-slate-500 { color: rgba(0,0,0,0.55) !important; }
+.text-slate-600 { color: rgba(0,0,0,0.42) !important; }
+
+.text-emerald-400 { color: #0e8f78 !important; }
+.text-amber-300 { color: #b45309 !important; }
+.text-red-400 { color: #dc2626 !important; }
+
+[class*="hover:text-cyan-300"]:hover { color: #000 !important; text-decoration: underline; text-underline-offset: 4px; }
+.group:hover [class*="group-hover:text-cyan-300"] { color: #000 !important; }
+[class*="placeholder:text-slate-600"]::placeholder { color: rgba(0,0,0,0.4) !important; }
+
+/* gradient display text → flat pink with black outline (gumroad hero style) */
+.text-transparent.bg-clip-text {
+  background-image: none !important;
+  color: #ff90e8 !important;
+  -webkit-text-fill-color: #ff90e8;
+  -webkit-text-stroke: 2px #000;
+  paint-order: stroke fill;
+}
+
+/* ---------- borders: everything outlined in black ---------- */
+.border { border-width: 2px !important; border-radius: 4px; }
+.border-slate-700, .border-slate-800, .border-slate-900 { border-color: #000 !important; }
+.border-slate-600 { border-color: rgba(0,0,0,0.35) !important; }
+[class*="border-cyan-"] { border-color: #000 !important; }
+.divide-slate-900 > * + * { border-color: rgba(0,0,0,0.15) !important; }
+
+/* status badge colors */
+[class*="border-emerald-7"] { border-color: #0e8f78 !important; }
+[class*="border-amber-7"] { border-color: #b45309 !important; }
+[class*="border-cyan-600/50"] { background-color: #ff90e8 !important; } /* IN PROGRESS chip */
+
+/* active node + timeline markers */
+.border-cyan-400 { border-color: #000 !important; background-color: #ff90e8 !important; }
+.border-emerald-400 { border-color: #000 !important; background-color: #23a094 !important; }
+
+/* why-card icon chips → yellow stickers */
+[class*="border-cyan-900/60"] { background-color: #ffc900 !important; box-shadow: 3px 3px 0 #000; }
+
+/* ---------- hard offset shadows (neo-brutalist cards) ---------- */
+.border.border-slate-800 { box-shadow: 4px 4px 0 #000; }
+.border.border-slate-900 { box-shadow: 6px 6px 0 #000; }
+
+/* glow shadows → hard black offset shadows */
+[class*="hover:shadow-"]:hover { box-shadow: 4px 4px 0 #000 !important; }
+
+/* ---------- accents: cyan → gumroad pink ---------- */
+.bg-cyan-400 { background-color: #ff90e8 !important; }
+[class*="bg-cyan-400/60"] { background-color: #000 !important; }   /* section-head dash */
+[class*="from-cyan-500"] { background-image: none !important; background-color: #ff90e8 !important; } /* progress bar / timeline rail */
+[class*="from-cyan-400"] { background-image: none !important; background-color: #000 !important; }    /* module hover sweep */
+
+/* primary CTA buttons — bordered pink blocks that press down on hover */
+a.bg-cyan-400, button.bg-cyan-400 {
+  border: 2px solid #000;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 #000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+a.bg-cyan-400:hover, button.bg-cyan-400:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000 !important;
+}
+
+/* form focus — black border, pink offset shadow */
+[class*="focus:border-cyan-500"]:focus {
+  border-color: #000 !important;
+  box-shadow: 4px 4px 0 #ff90e8;
+  outline: none;
+}

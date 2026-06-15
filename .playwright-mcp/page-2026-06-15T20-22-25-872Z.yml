@@ -1,0 +1,50 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "RESUME AI" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img [ref=e6]
+      - generic [ref=e9]: RESUME AI
+    - navigation [ref=e10]:
+      - link "ANALYZE" [ref=e11] [cursor=pointer]:
+        - /url: /app
+        - img [ref=e12]
+        - text: ANALYZE
+      - link "HISTORY" [ref=e17] [cursor=pointer]:
+        - /url: /history
+        - img [ref=e18]
+        - text: HISTORY
+      - link "HOME" [ref=e22] [cursor=pointer]:
+        - /url: /
+        - img [ref=e23]
+        - text: HOME
+    - generic [ref=e27]:
+      - generic [ref=e30]: MCP SERVER
+      - generic [ref=e31]: localhost:8080
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "ANALYZER" [level=1] [ref=e36]
+        - paragraph [ref=e37]: Workspace / New Analysis
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e42]: 01 / RESUME
+          - generic [ref=e43] [cursor=pointer]:
+            - img [ref=e45]
+            - generic [ref=e49]: DROP FILE HERE
+            - generic [ref=e50]: PDF or DOCX · Max 5MB
+        - generic [ref=e51]:
+          - generic [ref=e54]: 02 / TARGET JOB
+          - generic [ref=e55]:
+            - img [ref=e56]
+            - textbox "https://..." [ref=e59]
+        - generic [ref=e60]:
+          - generic [ref=e63]: 03 / LINKEDIN (OPT)
+          - textbox "Paste profile text here..." [ref=e64]
+        - button "RUN DEEP ANALYSIS" [disabled] [ref=e65]:
+          - img [ref=e66]
+          - text: RUN DEEP ANALYSIS
+    - generic [ref=e71]:
+      - generic:
+        - generic:
+          - text: AWAITING
+          - text: ANALYSIS
