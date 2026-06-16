@@ -11,6 +11,7 @@ import { getResumeImprovements, getResumeImprovementsSchema } from "./tools/get-
 import { generateCoverLetter, generateCoverLetterSchema } from "./tools/generate-cover-letter.js";
 import { linkedinProfileOptimizer, linkedinProfileOptimizerSchema } from "./tools/linkedin-profile-optimizer.js";
 import { skillGapAnalysis, skillGapAnalysisSchema } from "./tools/skill-gap-analysis.js";
+import { analyzeCompany, analyzeCompanySchema } from "./tools/analyze-company.js";
 
 // ============================================================================
 // Dev Logging Utilities
@@ -209,11 +210,12 @@ function createMcpServer(): McpServer {
       title: "LinkedIn Profile Optimizer",
       description: "Analyze LinkedIn profile text and suggest improvements.",
       inputSchema: {
-        linkedin_text: z.string().describe("The raw text copied from the candidate's LinkedIn profile")
+        linkedin_text: z.string().describe("The raw text copied from the candidate's LinkedIn profile, or their LinkedIn URL"),
+        resume_text: z.string().optional().describe("The raw text of the candidate's resume, used as a fallback if a URL is provided")
       },
     },
     async (args) => {
-      const output = await linkedinProfileOptimizer(args.linkedin_text);
+      const output = await linkedinProfileOptimizer(args.linkedin_text, args.resume_text);
       return {
         content: [{ type: "text", text: JSON.stringify(output) }],
         structuredContent: output,
@@ -233,6 +235,24 @@ function createMcpServer(): McpServer {
     },
     async (args) => {
       const output = await skillGapAnalysis(args.resume_text, args.job_text);
+      return {
+        content: [{ type: "text", text: JSON.stringify(output) }],
+        structuredContent: output,
+      };
+    }
+  );
+
+  server.registerTool(
+    "analyze_company",
+    {
+      title: "Analyze Company",
+      description: "Extract company details and research from the job description.",
+      inputSchema: {
+        job_text: z.string().describe("The raw text of the job description")
+      },
+    },
+    async (args) => {
+      const output = await analyzeCompany(args.job_text);
       return {
         content: [{ type: "text", text: JSON.stringify(output) }],
         structuredContent: output,

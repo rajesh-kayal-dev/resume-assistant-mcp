@@ -1,9 +1,12 @@
-export async function callMcpTool(toolName: string, args: Record<string, any>) {
+const MCP_URL = "http://localhost:8080/mcp";
+
+export async function callMcpTool(toolName: string, args: any) {
   try {
-    const response = await fetch("http://localhost:8080/mcp", {
+    const response = await fetch(MCP_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Accept": "application/json, text/event-stream",
       },
       body: JSON.stringify({
         jsonrpc: "2.0",

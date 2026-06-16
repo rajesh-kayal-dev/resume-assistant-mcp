@@ -21,12 +21,12 @@ export function Sidebar() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
             <img 
-              src="/ResumeAnylizerMCPLOgo.png" 
-              alt="Resume AI Logo" 
+              src="/logo.png" 
+              alt="ResuMate MCP Logo" 
               className="w-full h-full object-contain group-hover:scale-105 transition-transform"
             />
           </div>
-          <span className="font-bold text-lg tracking-tight">Resume AI</span>
+          <span className="font-bold text-lg tracking-tight">ResuMate MCP</span>
         </Link>
       </div>
 

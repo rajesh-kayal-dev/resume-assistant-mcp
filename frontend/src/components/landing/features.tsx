@@ -92,7 +92,7 @@ export function Features() {
               </h2>
               <p className="text-black/60 dark:text-slate-400 font-medium mb-8">一體成形,而非拼裝整合</p>
               <p className="text-lg text-black/70 dark:text-slate-300 max-w-3xl leading-relaxed">
-                Most tools give you a generic chat box. Resume AI is engineered as a single analytical pipeline designed specifically to get you hired.
+                Most tools give you a generic chat box. ResuMate MCP is engineered as a single analytical pipeline designed specifically to get you hired.
               </p>
             </div>
           </Reveal>

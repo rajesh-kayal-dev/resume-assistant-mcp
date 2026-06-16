@@ -11,32 +11,29 @@ export interface GenerateCoverLetterResult {
   cover_letter_template: string;
 }
 
+import { askGroq } from "../lib/groq.js";
+
 export async function generateCoverLetter(resumeText: string, jobText: string): Promise<GenerateCoverLetterResult> {
-  const matchResult = await calculateAtsMatch(resumeText, jobText);
-  
-  const matched = matchResult.matched_keywords;
-  const missing = matchResult.missing_keywords;
+  const systemPrompt = `You are an expert Career Coach and Professional Resume Writer.
+Write a highly compelling, personalized cover letter for the candidate based on their resume and the target job description.
+The cover letter should be professional, highlight their most relevant achievements, and directly address the requirements of the job.
+Output JSON ONLY with the following exact structure:
+{
+  "cover_letter_template": "The full text of the cover letter..."
+}`;
 
-  const match1 = matched[0] || "[Key Skill 1]";
-  const match2 = matched[1] || "[Key Skill 2]";
-  const match3 = matched[2] || "[Key Skill 3]";
-  const missing1 = missing[0] || "[Required Skill]";
+  const userPrompt = `JOB DESCRIPTION:\n${jobText.slice(0, 4000)}\n\nRESUME:\n${resumeText.slice(0, 4000)}`;
 
-  const template = `Dear Hiring Manager,
-
-I am writing to express my strong interest in the open position at your company. With a solid background in ${match1} and ${match2}, I am confident in my ability to contribute effectively to your team from day one.
-
-In my previous roles, I successfully leveraged ${match3} to drive measurable results. My hands-on experience aligns closely with the core requirements outlined in the job description. 
-
-While my resume highlights my proficiency in these areas, I am also a fast learner. I understand this role requires familiarity with ${missing1}, and I am eager to apply my existing foundation to master it quickly.
-
-I would welcome the opportunity to discuss how my skills and experiences align with the goals of your team. Thank you for your time and consideration.
-
-Sincerely,
-[Your Name]
-[Your Contact Information]`;
-
-  return {
-    cover_letter_template: template,
-  };
+  try {
+    const jsonStr = await askGroq(systemPrompt, userPrompt);
+    const result = JSON.parse(jsonStr) as GenerateCoverLetterResult;
+    return {
+      cover_letter_template: typeof result.cover_letter_template === 'string' ? result.cover_letter_template : "Error: Could not generate cover letter.",
+    };
+  } catch (err) {
+    console.error("Groq Cover Letter error:", err);
+    return {
+      cover_letter_template: "Error generating cover letter. Please try again.",
+    };
+  }
 }
