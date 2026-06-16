@@ -1,7 +1,7 @@
 {
   "name": "resume-assistant-mcp",
   "version": "1.0.0",
-  "description": "MCP server for ATS resume analysis — parse, score, improve resumes and generate cover letters, interview questions, skill roadmaps, and LinkedIn optimization tips.",
+  "description": "MCP server for ATS resume analysis ï¿½ parse, score, improve resumes and generate cover letters, interview questions, skill roadmaps, and LinkedIn optimization tips.",
   "type": "module",
   "main": "dist/index.js",
   "keywords": [
@@ -52,7 +52,9 @@
     "@modelcontextprotocol/sdk": "^1.23.0",
     "axios": "^1.18.0",
     "chalk": "^5.4.1",
+    "dotenv": "^17.4.2",
     "express": "^5.1.0",
+    "groq-sdk": "^1.2.1",
     "mammoth": "^1.12.0",
     "unpdf": "^1.6.2",
     "zod": "^4.0.0"

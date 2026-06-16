@@ -12,8 +12,8 @@ export function AppSidebar() {
     <div className="w-64 border-r border-slate-200 dark:border-slate-900 bg-slate-50 dark:bg-[#04060a] flex flex-col h-screen sticky top-0 transition-colors duration-300">
       <div className="h-16 flex items-center px-6 border-b border-slate-200 dark:border-slate-900">
         <Link href="/" className="flex items-center gap-2 group">
-          <Cpu className="text-slate-800 dark:text-cyan-400 w-5 h-5 transition-colors" />
-          <span className="font-mono font-semibold tracking-widest text-slate-900 dark:text-white transition-colors">RESUME AI</span>
+          <img src="/logo.png" alt="ResuMate MCP Logo" className="w-6 h-6 object-contain transition-transform group-hover:scale-105" />
+          <span className="font-mono font-semibold tracking-widest text-slate-900 dark:text-white transition-colors">RESUMATE MCP</span>
         </Link>
       </div>
 

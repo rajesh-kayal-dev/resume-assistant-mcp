@@ -32,8 +32,8 @@ export function Navbar() {
     >
       <nav className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <Cpu className="text-black dark:text-cyan-400 w-6 h-6" />
-          <span className="font-mono font-bold tracking-widest text-black dark:text-white text-lg">RESUME AI</span>
+          <img src="/logo.png" alt="ResuMate MCP Logo" className="w-8 h-8 object-contain" />
+          <span className="font-mono font-bold tracking-widest text-black dark:text-white text-lg">RESUMATE MCP</span>
           <span className="hidden sm:inline font-mono text-xs text-black/50 dark:text-slate-500 tracking-wider">mcp-powered analysis</span>
         </Link>
         <div className="hidden md:flex items-center gap-8">

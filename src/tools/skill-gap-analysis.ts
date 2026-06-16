@@ -6,32 +6,38 @@ export const skillGapAnalysisSchema = {
   job_text: z.string().describe("The raw text of the job description"),
 };
 
+import { askGroq } from "../lib/groq.js";
+
 export interface SkillGapAnalysisResult {
   [key: string]: unknown;
   missing_skills: string[];
-  learning_roadmap: string[];
+  learning_roadmap: string;
 }
 
 export async function skillGapAnalysis(resumeText: string, jobText: string): Promise<SkillGapAnalysisResult> {
-  const matchResult = await calculateAtsMatch(resumeText, jobText);
-  
-  const missing = matchResult.missing_keywords;
-  const roadmap: string[] = [];
+  const systemPrompt = `You are an expert Career Coach and Technical Mentor.
+Identify exactly which key skills from the job description are missing in the candidate's resume.
+Then, generate a concise, actionable, step-by-step learning roadmap (with estimated timeframes) to acquire those missing skills.
+Output JSON ONLY with the following exact structure:
+{
+  "missing_skills": ["skill 1", "skill 2"],
+  "learning_roadmap": "A paragraph or markdown-formatted string with step-by-step instructions..."
+}`;
 
-  if (missing.length === 0) {
-    roadmap.push("No major skill gaps identified! You seem well-qualified for this role.");
-  } else {
-    // Generate a basic learning roadmap based on missing keywords
-    roadmap.push("Phase 1 (Immediate): Familiarize yourself with the high-level concepts of: " + missing.slice(0, 2).join(", "));
-    roadmap.push("Phase 2 (Short-term): Build a small " + (missing[0] || "project") + " side-project to gain practical experience.");
-    
-    if (missing.length > 2) {
-      roadmap.push("Phase 3 (Long-term): Take an online course covering: " + missing.slice(2, 5).join(", "));
-    }
+  const userPrompt = `JOB DESCRIPTION:\n${jobText.slice(0, 4000)}\n\nRESUME:\n${resumeText.slice(0, 4000)}`;
+
+  try {
+    const jsonStr = await askGroq(systemPrompt, userPrompt);
+    const result = JSON.parse(jsonStr) as SkillGapAnalysisResult;
+    return {
+      missing_skills: Array.isArray(result.missing_skills) ? result.missing_skills : [],
+      learning_roadmap: typeof result.learning_roadmap === 'string' ? result.learning_roadmap : "No roadmap available.",
+    };
+  } catch (err) {
+    console.error("Groq Skill Gap error:", err);
+    return {
+      missing_skills: ["Error generating skill gap analysis"],
+      learning_roadmap: "Error generating learning roadmap.",
+    };
   }
-
-  return {
-    missing_skills: missing,
-    learning_roadmap: roadmap,
-  };
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Resume AI — AI-Powered ATS Analysis & Career Tools",
+  title: "ResuMate MCP — AI-Powered ATS Analysis & Career Tools",
   description: "Upload your resume, paste a job URL, and get instant ATS scores, interview questions, skill gap analysis, and a cover letter — all powered by MCP AI tools.",
 };
 

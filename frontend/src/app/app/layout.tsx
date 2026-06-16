@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resume AI — Analyzer",
+  title: "ResuMate MCP — Analyzer",
   description: "Upload your resume and analyze it against any job description.",
 };
 

@@ -12,37 +12,32 @@ export interface GenerateInterviewQuestionsResult {
   hr_questions: string[];
 }
 
+import { askGroq } from "../lib/groq.js";
+
 export async function generateInterviewQuestions(resumeText: string, jobText: string): Promise<GenerateInterviewQuestionsResult> {
-  const matchResult = await calculateAtsMatch(resumeText, jobText);
-  
-  const techQuestions: string[] = [];
-  
-  // Generate questions based on matched keywords (to verify experience)
-  const matched = matchResult.matched_keywords.slice(0, 3);
-  for (const keyword of matched) {
-    techQuestions.push(`Your resume indicates experience with ${keyword}. Can you walk me through a specific project where you utilized this?`);
+  const systemPrompt = `You are an expert Technical Interviewer and HR Recruiter.
+Given the candidate's resume and the target job description, generate 3 highly specific technical interview questions and 3 HR/behavioral interview questions. 
+The technical questions should probe specific skills mentioned in the job description, especially if the candidate is missing them or claiming them.
+Output JSON ONLY with the following exact structure:
+{
+  "technical_questions": ["question 1", "question 2", "question 3"],
+  "hr_questions": ["question 1", "question 2", "question 3"]
+}`;
+
+  const userPrompt = `JOB DESCRIPTION:\n${jobText.slice(0, 4000)}\n\nRESUME:\n${resumeText.slice(0, 4000)}`;
+
+  try {
+    const jsonStr = await askGroq(systemPrompt, userPrompt);
+    const result = JSON.parse(jsonStr) as GenerateInterviewQuestionsResult;
+    return {
+      technical_questions: Array.isArray(result.technical_questions) ? result.technical_questions : ["Could you walk me through your technical experience?"],
+      hr_questions: Array.isArray(result.hr_questions) ? result.hr_questions : ["Why are you interested in this role?"],
+    };
+  } catch (err) {
+    console.error("Groq Interview Questions error:", err);
+    return {
+      technical_questions: ["Error generating technical questions."],
+      hr_questions: ["Error generating HR questions."],
+    };
   }
-
-  // Generate questions based on missing keywords (to probe for unlisted experience)
-  const missing = matchResult.missing_keywords.slice(0, 2);
-  for (const keyword of missing) {
-    techQuestions.push(`This role requires strong knowledge of ${keyword}. Can you describe your familiarity with it, even if it's not explicitly on your resume?`);
-  }
-
-  // Fallback if no keywords found
-  if (techQuestions.length === 0) {
-    techQuestions.push("Can you describe a challenging technical problem you solved recently?");
-    techQuestions.push("How do you ensure the quality and reliability of your work?");
-  }
-
-  const hrQuestions = [
-    "Why are you interested in this particular role based on the job description?",
-    "Tell me about a time you had to adapt to a significant change in a project's requirements.",
-    "Where do you see your career progressing in the next 2-3 years, and how does this role fit that vision?"
-  ];
-
-  return {
-    technical_questions: techQuestions,
-    hr_questions: hrQuestions,
-  };
 }

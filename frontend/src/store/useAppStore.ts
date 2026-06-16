@@ -5,6 +5,11 @@ export interface AnalysisData {
   atsScore?: number;
   matchedKeywords?: string[];
   missingKeywords?: string[];
+  jobRole?: string;
+  salary?: string;
+  experienceRequired?: string;
+  recommendation?: string;
+  suitabilityAssessment?: string;
   resumeImprovements?: string[];
   resumeMetrics?: {
     word_count: number;
@@ -21,6 +26,15 @@ export interface AnalysisData {
     summary_suggestions: string[];
     general_tips: string[];
   };
+  companyData?: {
+    company_name: string;
+    website_domain: string;
+    industry: string;
+    location: string;
+    company_size: string;
+    founded_year: string;
+    about: string;
+  };
 }
 
 export interface HistoryEntry {
@@ -32,7 +46,30 @@ export interface HistoryEntry {
   analysisData: AnalysisData;
 }
 
-interface AppState {
+export interface AnalysisOptions {
+  resumeImprovements: boolean;
+  interviewQuestions: boolean;
+  skillGap: boolean;
+  coverLetter: boolean;
+  linkedinOptimization: boolean;
+  companyAnalysis: boolean;
+}
+
+export interface AppState {
+  jobUrl: string;
+  setJobUrl: (url: string) => void;
+  linkedinText: string;
+  setLinkedinText: (text: string) => void;
+  file: File | null;
+  setFile: (file: File | null) => void;
+  analysisOptions: AnalysisOptions;
+  setAnalysisOptions: (options: Partial<AnalysisOptions>) => void;
+  isAnalyzing: boolean;
+  error: string | null;
+  progress: string;
+  results: AnalysisData | null;
+  analyze: () => Promise<void>;
+  
   currentAnalysis: {
     resumeText: string | null;
     jobText: string | null;
@@ -51,6 +88,72 @@ interface AppState {
 export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
+      jobUrl: "",
+      setJobUrl: (url) => set({ jobUrl: url }),
+      linkedinText: "",
+      setLinkedinText: (text) => set({ linkedinText: text }),
+      file: null,
+      setFile: (file) => set({ file }),
+      analysisOptions: {
+        resumeImprovements: true,
+        interviewQuestions: true,
+        skillGap: true,
+        coverLetter: true,
+        linkedinOptimization: true,
+        companyAnalysis: true,
+      },
+      setAnalysisOptions: (options) => set((state) => ({ analysisOptions: { ...state.analysisOptions, ...options } })),
+      isAnalyzing: false,
+      error: null,
+      progress: "",
+      results: null,
+      
+      analyze: async () => {
+        const { file, jobUrl, linkedinText, analysisOptions } = get();
+        if (!file || !jobUrl) return;
+        
+        set({ isAnalyzing: true, error: null, progress: "Parsing resume..." });
+        try {
+          const formData = new FormData();
+          formData.append("file", file);
+          
+          const uploadRes = await fetch("/api/upload-and-parse", {
+            method: "POST",
+            body: formData,
+          });
+          if (!uploadRes.ok) throw new Error((await uploadRes.json()).error || "Failed to parse resume");
+          const uploadData = await uploadRes.json();
+          const resumeText = uploadData.parsed_text;
+
+          set({ progress: "Fetching job details..." });
+          const jobRes = await fetch("/api/fetch-job", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url: jobUrl }),
+          });
+          if (!jobRes.ok) throw new Error((await jobRes.json()).error || "Failed to fetch job");
+          const jobData = await jobRes.json();
+          const jobText = jobData.job_text;
+
+          set({ progress: "Running deep analysis..." });
+          const analyzeRes = await fetch("/api/analyze", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ resumeText, jobText, linkedinText, analysisOptions }),
+          });
+          if (!analyzeRes.ok) throw new Error((await analyzeRes.json()).error || "Analysis failed");
+          const analyzeData = await analyzeRes.json();
+
+          set({ results: analyzeData, progress: "Complete!" });
+          get().setCurrentAnalysis(resumeText, jobText, linkedinText, analyzeData);
+          get().saveToHistory(file.name, "Analyzed Job");
+        } catch (error: any) {
+          set({ error: error.message || "An unexpected error occurred" });
+        } finally {
+          set({ isAnalyzing: false });
+        }
+      },
+
       currentAnalysis: {
         resumeText: null,
         jobText: null,
@@ -87,8 +190,6 @@ export const useAppStore = create<AppState>()(
       loadFromHistory: (id) => {
         const entry = get().history.find((h) => h.id === id);
         if (entry) {
-          // We don't have the raw texts in history, but we have the analysis data
-          // We could store raw texts in history if needed, but for now we just load data.
           set({
             currentAnalysis: {
               resumeText: null,
@@ -96,6 +197,7 @@ export const useAppStore = create<AppState>()(
               linkedinText: null,
               data: entry.analysisData,
             },
+            results: entry.analysisData
           });
         }
       },
@@ -105,6 +207,7 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: "resume-assistant-storage",
+      partialize: (state) => ({ history: state.history }), // Only persist history, not file objects
     }
   )
 );

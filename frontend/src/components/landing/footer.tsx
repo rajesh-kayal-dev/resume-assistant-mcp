@@ -10,8 +10,8 @@ export function Footer() {
           YOU UPLOAD THE DATA; WE BUILD THE TIDE.
         </div>
         <div className="font-mono text-xs text-slate-400 dark:text-slate-600 tracking-wider flex items-center gap-2">
-          <Cpu className="text-slate-300 dark:text-cyan-700 w-4 h-4" />
-          RESUME AI v1.0 · MCP INTEGRATION · © {new Date().getFullYear()}
+          <img src="/logo.png" alt="ResuMate MCP Logo" className="w-4 h-4 object-contain opacity-50 dark:opacity-70" />
+          RESUMATE MCP v1.0 · MCP INTEGRATION · © {new Date().getFullYear()}
         </div>
       </div>
     </footer>
