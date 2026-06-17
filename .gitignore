@@ -36,3 +36,6 @@ npm-debug.log*
 /playwright-report/
 /playwright/.cache/
 
+# Playwright MCP artifacts
+.playwright-mcp/
+
