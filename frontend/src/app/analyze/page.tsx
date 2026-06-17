@@ -263,7 +263,7 @@ export default function AnalyzePage() {
               <Loader2 className="w-12 h-12 animate-spin text-primary mb-4" />
               <h3 className="text-lg font-medium">Running MCP Toolchain</h3>
               <div className="w-64 mt-4 space-y-2">
-                <Progress value={undefined} className="h-2" />
+                <Progress value={null} className="h-2" />
                 <p className="text-xs text-center text-muted-foreground">Parsing texts, comparing keywords, generating models...</p>
               </div>
             </div>

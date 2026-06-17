@@ -22,8 +22,8 @@ export function ResultsPreview() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionHead
           tag="04 / RESULTS"
-          title="Six panels. One analysis."
-          subtitle="Everything you need to land the role"
+          en="Six panels. One analysis."
+          zh="Everything you need to land the role"
           intro="Every result is generated specifically for your resume against the target job description. No generic advice — all context-aware output from 8 specialized MCP tools."
         />
 

@@ -45,7 +45,9 @@
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
     "test": "vitest run",
-    "test:smoke": "node scripts/smoke-test.js"
+    "test:smoke": "node scripts/smoke-test.js",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@cacheable/node-cache": "^3.0.1",
@@ -60,8 +62,10 @@
     "zod": "^4.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.0",
     "@types/express": "^5.0.1",
     "@types/node": "^22.15.21",
+    "playwright": "^1.61.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vitest": "^3.0.0"

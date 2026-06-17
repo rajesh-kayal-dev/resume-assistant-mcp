@@ -316,7 +316,7 @@ export default function AnalyzerPage() {
                             <Check size={14} /> MATCHED KEYWORDS
                           </div>
                           <div className="flex flex-wrap gap-2">
-                            {results.matchedKeywords.map((kw: string) => (
+                            {(results.matchedKeywords ?? []).map((kw: string) => (
                               <span key={kw} className="px-3 py-1 font-mono text-[10px] border border-emerald-200 dark:border-emerald-900/50 bg-emerald-50 dark:bg-emerald-950/20 text-emerald-700 dark:text-emerald-400">
                                 {kw}
                               </span>
@@ -328,7 +328,7 @@ export default function AnalyzerPage() {
                             <X size={14} /> MISSING KEYWORDS
                           </div>
                           <div className="flex flex-wrap gap-2">
-                            {results.missingKeywords.map((kw: string) => (
+                            {(results.missingKeywords ?? []).map((kw: string) => (
                               <span key={kw} className="px-3 py-1 font-mono text-[10px] border border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-950/20 text-red-700 dark:text-red-400">
                                 {kw}
                               </span>

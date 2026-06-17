@@ -275,6 +275,11 @@ app.get("/health", (_req: Request, res: Response) => {
   res.status(200).json({ status: "healthy" });
 });
 
+// Anti-sleep ping endpoint for Render + cron-job.org keep-awake
+app.get("/ping", (_req: Request, res: Response) => {
+  res.status(200).json({ status: "alive", timestamp: new Date().toISOString() });
+});
+
 // MCP endpoint with dev logging
 app.post("/mcp", async (req: Request, res: Response) => {
   const startTime = Date.now();
