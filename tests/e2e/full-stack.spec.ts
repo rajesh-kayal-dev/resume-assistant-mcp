@@ -21,6 +21,9 @@ test.describe("Full-Stack Integration", () => {
 
   test("Backend MCP tools/list returns registered tools", async ({ request }) => {
     const resp = await request.post(`${BACKEND_URL}/mcp`, {
+      headers: {
+        Accept: "application/json, text/event-stream",
+      },
       data: {
         jsonrpc: "2.0",
         id: 1,
