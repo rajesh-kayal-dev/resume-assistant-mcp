@@ -31,3 +31,8 @@ npm-debug.log*
 # GitHub Actions (keep workflows committed)
 !.github/
 
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+

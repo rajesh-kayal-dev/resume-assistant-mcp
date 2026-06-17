@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronRight, Globe, Database, FileText, Waves, List, Play, ExternalLink, Copy, Check, ShieldAlert, Timer, ThumbsUp, ThumbsDown, Link as LinkIcon, ArrowUpRight, Zap } from "lucide-react";
 
 export default function DocsPage() {
@@ -71,9 +72,9 @@ export default function DocsPage() {
     <>
       {/* Breadcrumbs */}
       <div className="text-xs text-zinc-500 flex items-center gap-2">
-        <a href="/docs" className="hover:text-zinc-300 transition">Docs</a>
+        <Link href="/docs" className="hover:text-zinc-300 transition">Docs</Link>
         <ChevronRight className="h-3.5 w-3.5 text-zinc-600" />
-        <a href="/" className="hover:text-zinc-300 transition">MCP Server</a>
+        <Link href="/" className="hover:text-zinc-300 transition">MCP Server</Link>
         <ChevronRight className="h-3.5 w-3.5 text-zinc-600" />
         <span className="text-zinc-400">Analysis Endpoint</span>
       </div>

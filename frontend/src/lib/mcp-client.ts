@@ -1,4 +1,5 @@
-const MCP_URL = "http://localhost:8080/mcp";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8080";
+const MCP_URL = `${BACKEND_URL}/mcp`;
 
 export async function callMcpTool(toolName: string, args: any) {
   try {
