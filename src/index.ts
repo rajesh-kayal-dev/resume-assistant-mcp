@@ -3,7 +3,7 @@ import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/
 import express, { Request, Response } from "express";
 import { z } from "zod";
 import chalk from "chalk";
-import { parseResumeLocal, parseResumeLocalSchema } from "./tools/parse-resume-local.js";
+import { parseResumeLocal, parseResumeLocalSchema, parseResumeFromBase64 } from "./tools/parse-resume-local.js";
 import { fetchJobDescription, fetchJobDescriptionSchema } from "./tools/fetch-job-description.js";
 import { calculateAtsMatch, calculateAtsMatchSchema } from "./tools/calculate-ats-match.js";
 import { generateInterviewQuestions, generateInterviewQuestionsSchema } from "./tools/generate-interview-questions.js";
@@ -104,6 +104,25 @@ function createMcpServer(): McpServer {
     },
     async (args) => {
       const output = await parseResumeLocal(args.file_path);
+      return {
+        content: [{ type: "text", text: JSON.stringify(output) }],
+        structuredContent: output,
+      };
+    }
+  );
+
+  server.registerTool(
+    "parse_resume",
+    {
+      title: "Parse Resume",
+      description: "Extract raw text from a PDF, DOCX, TXT, or MD file sent as base64 content.",
+      inputSchema: {
+        file_name: z.string().describe("Original filename with extension (.pdf, .docx, .txt, .md)"),
+        content: z.string().describe("Base64-encoded file content")
+      },
+    },
+    async (args) => {
+      const output = await parseResumeFromBase64(args.file_name, args.content);
       return {
         content: [{ type: "text", text: JSON.stringify(output) }],
         structuredContent: output,

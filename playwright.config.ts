@@ -6,9 +6,6 @@ export default defineConfig({
   retries: 1,
   use: {
     baseURL: process.env.FRONTEND_URL || "http://localhost:3000",
-    extraHTTPHeaders: {
-      Accept: "application/json",
-    },
   },
   projects: [
     {

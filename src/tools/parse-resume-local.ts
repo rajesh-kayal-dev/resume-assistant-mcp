@@ -14,6 +14,35 @@ export interface ParseResumeLocalResult {
   word_count: number;
 }
 
+export async function parseResumeFromBase64(fileName: string, base64Content: string): Promise<ParseResumeLocalResult> {
+  const buffer = Buffer.from(base64Content, "base64");
+  const ext = path.extname(fileName).toLowerCase();
+  let text = "";
+
+  if (ext === ".pdf") {
+    try {
+      const pdf = await getDocumentProxy(new Uint8Array(buffer));
+      const extracted = await extractText(pdf);
+      const rawText = (extracted as any).text || extracted;
+      text = Array.isArray(rawText) ? rawText.join("\n") : String(rawText);
+    } catch (e) {
+      throw new Error(`Failed to parse PDF: ${e instanceof Error ? e.message : String(e)}`);
+    }
+  } else if (ext === ".docx") {
+    const result = await mammoth.extractRawText({ buffer });
+    text = result.value;
+  } else if (ext === ".txt" || ext === ".md") {
+    text = buffer.toString("utf-8");
+  } else {
+    throw new Error(`Unsupported file type: ${ext}. Only .pdf, .docx, .txt, and .md are supported.`);
+  }
+
+  text = text.replace(/\r\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+  const wordCount = text.split(/\s+/).filter(w => w.length > 0).length;
+
+  return { parsed_text: text, word_count: wordCount };
+}
+
 export async function parseResumeLocal(filePath: string): Promise<ParseResumeLocalResult> {
   const resolvedPath = path.resolve(filePath);
   

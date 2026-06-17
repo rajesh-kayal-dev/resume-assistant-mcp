@@ -23,6 +23,7 @@ test.describe("Full-Stack Integration", () => {
     const resp = await request.post(`${BACKEND_URL}/mcp`, {
       headers: {
         Accept: "application/json, text/event-stream",
+        "Content-Type": "application/json",
       },
       data: {
         jsonrpc: "2.0",
@@ -35,6 +36,7 @@ test.describe("Full-Stack Integration", () => {
     const body = await resp.json();
     const toolNames = body.result.tools.map((t: { name: string }) => t.name);
     expect(toolNames).toContain("parse_resume_local");
+    expect(toolNames).toContain("parse_resume");
     expect(toolNames).toContain("fetch_job_description");
     expect(toolNames).toContain("calculate_ats_match");
     expect(toolNames).toContain("generate_interview_questions");
